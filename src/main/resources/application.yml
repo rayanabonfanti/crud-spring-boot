@@ -1,0 +1,23 @@
+# datasource
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/db_crud_mysql?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: Teste@123
+  # jpa
+  jpa:
+    defer-datasource-initialization: true
+    hibernate.ddl-auto: update
+    properties.hibernate.show_sql: true
+    properties.hibernate.format_sql: true
+# port server
+server:
+  port: 8090
+logging:
+  level:
+    root: TRACE
+  file: log.log
+  # pattern:
+  #   file: %d [%level] %c{1.} [%t] %m%n
+  #   console: %d [%level] %c{1.} [%t] %m%n
